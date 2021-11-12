@@ -1,4 +1,13 @@
-
+$secondaryinfocolor:rgb(119, 118, 118);
+$titlecolor:#2D3192;
+$coloraftrhovr:orange;
+.defbox{
+    margin: 15px;
+    width: 340px;
+    height: 450px;
+    border: 1px solid $secondaryinfocolor;
+    border-radius: 5px;
+}
 body{
     margin: 0px;
     padding: 0px;
@@ -26,25 +35,26 @@ body{
             }
             .readmorebtn{
                 p{
-                    text-align: center;
+                    position: relative;
+                    left: 20px;
                     margin: 0px;
-                }
-                
+                }  
                 font-weight: bold;
                 border: 3px solid rgb(214, 214, 214);
                 border-radius: 14px;
                 padding: 12px;
                 span{
+                    width: 20px;
                     position: relative;
-                    margin-left: 50px;
-                    color: orange;
+                    left: 40px;
+                    color:$coloraftrhovr;
                 }
                 transition: 0.2s;
                 &:hover{
                     span{
-                        left: 5px;
+                        left: 45px;
                     }
-                    border-color: orange;
+                    border-color:$coloraftrhovr;
                 }
             }
         }
@@ -54,11 +64,12 @@ body{
             .box{
                 text-align: center;
                 background-color: white;
-                margin: 15px;
-                width: 340px;
-                height: 450px;
-                border: 1px solid rgb(170, 170, 170);
-                border-radius: 5px;
+                // margin: 15px;
+                // width: 340px;
+                // height: 450px;
+                // border: 1px solid $secondaryinfocolor;
+                // border-radius: 5px;
+                @extend .defbox;
                 transition: 0.3s;
                 font-family: sans-serif;
                 a{
@@ -77,7 +88,7 @@ body{
                     font-family: 'Open Sans', sans-serif;
                 }
                 .info{
-                    color: rgb(119, 118, 118);
+                    color: $secondaryinfocolor;
                     font-size: 17px;
                     padding: 13px 7px 0px;
                     font-family: 'Open Sans', sans-serif;
